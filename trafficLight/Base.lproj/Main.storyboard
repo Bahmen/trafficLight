@@ -16,23 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-aB-wje">
-                                <rect key="frame" x="146" y="59" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L45-WP-ChO">
-                                <rect key="frame" x="146" y="207" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-AW-K59">
-                                <rect key="frame" x="146" y="355" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-g0-b4V">
+                                <rect key="frame" x="140" y="99" width="113" height="396"/>
+                                <subviews>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-aB-wje">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L45-WP-ChO">
+                                        <rect key="frame" x="0.0" y="148" width="113" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-AW-K59">
+                                        <rect key="frame" x="0.0" y="296" width="113" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-zT-eW0">
-                                <rect key="frame" x="146.66666666666666" y="579" width="100" height="34.666666666666629"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Dgt-gT-ioh"/>
-                                </constraints>
+                                <rect key="frame" x="158.66666666666666" y="601" width="75.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="START" cornerStyle="large"/>
                                 <connections>
@@ -43,21 +45,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="IHo-aB-wje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3fj-cz-r1p"/>
-                            <constraint firstItem="7m1-zT-eW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BbN-3B-Eai"/>
-                            <constraint firstItem="7m1-zT-eW0" firstAttribute="top" secondItem="CMB-AW-K59" secondAttribute="bottom" constant="124" id="Fj6-kT-4Jk"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="JsH-4D-fUv"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="top" secondItem="IHo-aB-wje" secondAttribute="bottom" constant="48" id="KBg-4h-VVd"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="207" id="M46-Wp-VAA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7m1-zT-eW0" secondAttribute="bottom" multiplier="4:3" id="QT2-Rq-Xh1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IHo-aB-wje" secondAttribute="trailing" constant="147" id="dlF-30-DeM"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="f38-EN-1l1"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="height" secondItem="L45-WP-ChO" secondAttribute="height" id="fmh-jT-DvL"/>
-                            <constraint firstItem="IHo-aB-wje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="m0Z-vd-dTT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L45-WP-ChO" secondAttribute="trailing" constant="147" id="q3i-SQ-GWL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CMB-AW-K59" secondAttribute="trailing" constant="147" id="upX-11-qG5"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="height" secondItem="IHo-aB-wje" secondAttribute="height" id="w2J-ch-DHb"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="top" secondItem="L45-WP-ChO" secondAttribute="bottom" constant="48" id="zNe-Qk-aqX"/>
+                            <constraint firstItem="5KB-g0-b4V" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.464789" id="Ln3-fq-nuG"/>
+                            <constraint firstItem="5KB-g0-b4V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="NHe-nR-aQD"/>
+                            <constraint firstItem="5KB-g0-b4V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ZwZ-zd-aRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5KB-g0-b4V" secondAttribute="trailing" constant="140" id="foy-fT-g8s"/>
+                            <constraint firstItem="7m1-zT-eW0" firstAttribute="top" secondItem="5KB-g0-b4V" secondAttribute="bottom" constant="106" id="m1S-Xy-TPI"/>
+                            <constraint firstItem="7m1-zT-eW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncc-5n-HKE"/>
                         </constraints>
                     </view>
                     <connections>
