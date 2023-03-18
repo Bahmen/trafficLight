@@ -15,23 +15,47 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var greenLightArea: UIView!
     
+    private let cornerRadius: CGFloat = 50
+    private let alpha: CGFloat = 0.3
+    private var currentLight = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        redLightArea.alpha = 0.3
-        redLightArea.layer.cornerRadius = 50
+    
+        redLightArea.alpha = alpha
+        redLightArea.layer.cornerRadius = cornerRadius
         
-        yellowLightArea.alpha = 0.3
-        yellowLightArea.layer.cornerRadius = 50
+        yellowLightArea.alpha = alpha
+        yellowLightArea.layer.cornerRadius = cornerRadius
         
-        greenLightArea.alpha = 0.3
-        greenLightArea.layer.cornerRadius = 50
+        greenLightArea.alpha = alpha
+        greenLightArea.layer.cornerRadius = cornerRadius
     }
 
     
     @IBAction func startButtonDidTapped(_ sender: UIButton) {
-        redLightArea.alpha = 1
         sender.setTitle("NEXT", for: .normal)
+        
+        if currentLight == 1 {
+            redLightArea.alpha = 1
+            yellowLightArea.alpha = 0.3
+            greenLightArea.alpha = 0.3
+        }
+        if currentLight == 2 {
+            redLightArea.alpha = 0.3
+            yellowLightArea.alpha = 1
+            greenLightArea.alpha = 0.3
+        }
+        if currentLight == 3 {
+            redLightArea.alpha = 0.3
+            yellowLightArea.alpha = 0.3
+            greenLightArea.alpha = 1
+        }
+        currentLight += 1
+        if currentLight == 4 {
+            currentLight = 1
+        }
+        
     }
 }
 
