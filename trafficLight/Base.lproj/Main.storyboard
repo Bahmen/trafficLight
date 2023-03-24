@@ -16,28 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-aB-wje">
-                                <rect key="frame" x="146.66666666666666" y="99" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="VPg-sz-KJK">
+                                <rect key="frame" x="146.66666666666666" y="99" width="100" height="380"/>
+                                <subviews>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-aB-wje">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L45-WP-ChO">
+                                        <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-AW-K59">
+                                        <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="MRX-TA-FlR"/>
-                                    <constraint firstAttribute="height" constant="100" id="yej-TZ-aFq"/>
+                                    <constraint firstAttribute="height" constant="380" id="3P5-Hp-3a7"/>
+                                    <constraint firstAttribute="width" constant="100" id="5si-yh-AVV"/>
                                 </constraints>
-                            </view>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L45-WP-ChO">
-                                <rect key="frame" x="146.66666666666666" y="239" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="9O2-P0-wVO"/>
-                                    <constraint firstAttribute="height" constant="100" id="P4g-dr-SYu"/>
-                                </constraints>
-                            </view>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-AW-K59">
-                                <rect key="frame" x="146.66666666666666" y="379" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-zT-eW0">
-                                <rect key="frame" x="158.66666666666666" y="783.33333333333337" width="76" height="34.333333333333371"/>
+                                <rect key="frame" x="158.66666666666666" y="783.33333333333337" width="75.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="START" cornerStyle="large"/>
                                 <connections>
@@ -48,16 +49,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="IHo-aB-wje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="0KR-gj-tBn"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Tv-4v-sBP"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="top" secondItem="L45-WP-ChO" secondAttribute="bottom" constant="40" id="FmG-Sa-1Fo"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bL5-R1-fNA"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="height" secondItem="L45-WP-ChO" secondAttribute="height" id="g7k-oR-KSj"/>
+                            <constraint firstItem="VPg-sz-KJK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SFj-Lh-Fs0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7m1-zT-eW0" secondAttribute="bottom" multiplier="7:9" constant="182" id="hX5-e3-inM"/>
-                            <constraint firstItem="IHo-aB-wje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="meo-KP-0rW"/>
-                            <constraint firstItem="CMB-AW-K59" firstAttribute="width" secondItem="L45-WP-ChO" secondAttribute="width" id="pCP-Aa-wzj"/>
-                            <constraint firstItem="L45-WP-ChO" firstAttribute="top" secondItem="IHo-aB-wje" secondAttribute="bottom" constant="40" id="uNN-2U-ng3"/>
                             <constraint firstItem="7m1-zT-eW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yky-Ww-h6h"/>
+                            <constraint firstItem="VPg-sz-KJK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="zKW-KR-7nm"/>
                         </constraints>
                     </view>
                     <connections>
